@@ -1,0 +1,27 @@
+@port = 5050
+@Host =  http://localhost
+
+@route = api/v1/users
+
+###
+
+POST {{Host}}:{{port}}/{{route}}/signup
+Content-Type: application/json
+
+{
+    "email":"benri@benri.com",
+    "name":"benri",
+    "password":"12341234",
+    "type":"recruiter"
+}
+
+###
+
+POST {{Host}}:{{port}}/{{route}}/login
+Content-Type: application/json
+
+{
+    "email":"benri@benri.com",
+    "password":"12341234"
+}
+
